@@ -61,16 +61,26 @@ public class Main {
 //					no esté con lo cual habría que decir que dicho libro NO SE PUEDE BORRAR	PORQUE NO ESTA EN LA BIBLIOTECA., 
 					System.out.print("Dame el ISBN: ");
 					isbn = input.nextLong();
-					if(biblioteca.buscarPos(isbn)==-1) {
-						
+					if(biblioteca.eliminar(isbn)) {
+						System.out.println("Libro eliminado correctamente.");
+					}else {
+						System.out.println("El libro no se puede borrar porque no esta en la biblioteca.");
 					}
 					break;
 				case 3:
 					//* Dado un ISBN (que habrá que leer por teclado), buscar dicho libro de la biblioteca. Puede suceder de que ese libro no esté con
 //					lo cual habría que decir que dicho libro NO ESTA EN LA BIBLIOTECA.
+					System.out.print("Dame el ISBN: ");
+					isbn = input.nextLong();
+					if (biblioteca.buscar(isbn)) {
+						System.out.println("El libro se encuentra en la biblioteca.");
+					}else {
+						System.out.println("Libro no esta en la biblioteca.");
+					}
 					break;
 				case 4:
 					//* Mostrar todos los libros de la biblioteca
+					System.out.println(biblioteca.toString());
 					break;
 				case 0:
 					System.out.println("Gracias por usar mi	biblioteca");
@@ -79,6 +89,6 @@ public class Main {
 					System.out.println("Opción incorrecta");
 			}
 		}while(opcion != 0);
-		
+		input.close();
 	}
 }
