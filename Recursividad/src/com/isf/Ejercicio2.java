@@ -8,15 +8,21 @@ public class Ejercicio2 {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
 		System.out.print("Introduce la base del exponencial: ");
-		int n = input.nextInt();
+		double n = input.nextDouble();
 		System.out.print("Introduce el exponente: ");
-		int exp = input.nextInt();
-		System.out.printf("El resultado de %d^%d es %d", n,exp, exponencial(n,exp));
+		double exp = input.nextDouble();
+		System.out.printf("El resultado de %.1f^%.1f es %f", n,exp, exponencial(n,exp));
 		input.close();
 	}
-	public static int exponencial(int n, int exp) {
-		if(exp==1)
+	public static double exponencial(double n, double exp) {
+		if(exp == 1) {
 			return n;
-		return n * exponencial(n,exp-1);
+		}else if (exp > 0) {
+			return n * exponencial(n,exp-1);
+		}
+		else{
+			return 1/Math.abs(n)*1/exponencial(n,Math.abs(exp)-1);
+		}
+		
 	}
 }
