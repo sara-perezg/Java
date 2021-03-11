@@ -21,7 +21,7 @@ public class Ejercicio2 {
 			return n * exponencial(n,exp-1);
 		}
 		else{
-			return 1/Math.abs(n)*1/exponencial(n,Math.abs(exp)-1);
+			return 1/n*1/exponencial(n,Math.abs(exp)-1);
 		}
 		
 	}
