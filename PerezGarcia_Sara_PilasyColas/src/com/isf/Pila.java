@@ -14,8 +14,6 @@ public class Pila extends ColeccionSimple {
 		// TODO Auto-generated constructor stub
 	}
 
-
-	
 	@Override
 	public Object extraer() {
 		// TODO Auto-generated method stub
