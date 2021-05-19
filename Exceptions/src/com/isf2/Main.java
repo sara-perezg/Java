@@ -5,7 +5,7 @@ import java.io.EOFException;
 public class Main {
 
 	
-	public static void methodThrowingException() throws EOFException{
+	public static void methodThrowingException() throws RuntimeException{
 		int i = 0;
 		String cadenas[] = {
 		"Cadena 1",
@@ -28,7 +28,7 @@ public class Main {
 		
 		try {
 			methodThrowingException();
-		} catch (EOFException e) {
+		} catch (RuntimeException e) {
 			// TODO: handle exception
 			System.out.println();
 		}
