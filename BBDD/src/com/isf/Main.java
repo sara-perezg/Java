@@ -9,7 +9,7 @@ public class Main {
 		ConexionDB cBD = new ConexionDB();
 		
 		System.out.println("Mostrando todos los empleados...");
-		cBD.getAllEmpleados();
+		cBD.showAllEmpleados();
 		System.out.println("\nMostrando el empleado con id = 1...");
 		cBD.getEmpleadoByID(1);
 		
