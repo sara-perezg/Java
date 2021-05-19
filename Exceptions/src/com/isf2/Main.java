@@ -22,7 +22,7 @@ public class Main {
 			}else {
 				System.out.println(cadenas[i]);
 			}
-		};			
+		}			
 	}
 	public static void main(String[] args) {
 		
