@@ -46,7 +46,7 @@ public class Main {
 			methodThrowingException();
 		} catch (exceptionIndex e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("error de indice");
 		}
 	}
 }
