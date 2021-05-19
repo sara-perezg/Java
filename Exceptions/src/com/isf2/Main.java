@@ -1,7 +1,5 @@
 package com.isf2;
 
-import java.io.EOFException;
-
 public class Main {
 
 	
