@@ -1,9 +1,10 @@
 package com.isf;
 
+//import java.io.IOException;
+
 public class Main {
 
-	public static void main(String[] args) {
-		
+	public static void methodThrowingException() throws RuntimeException{
 		int i = 0;
 		String cadenas[] = {
 		"Cadena 1",
@@ -12,11 +13,17 @@ public class Main {
 		"Cadena 4"
 		};
 		
+		
+		for (i=0; i<=4; i++) System.out.println(cadenas[i]);			
+	}
+	
+	public static void main(String[] args) {
+		
 		try {
-			for (i=0; i<=4; i++) System.out.println(cadenas[i]);			
+			methodThrowingException();			
 		} catch (ArrayIndexOutOfBoundsException e) {
 			// TODO: handle exception
-			System.out.println("Error indice fuera de rango");
+			System.out.println("index out of range");
 		}
 	}
 }
