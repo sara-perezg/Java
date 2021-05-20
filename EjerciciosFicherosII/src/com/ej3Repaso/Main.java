@@ -23,7 +23,7 @@ public class Main {
 	}
 	public static void main(String[] args) {
 		
-		String path = "misNumeros.txt";
+		String path = "misNumeros.dat";
 		int n = 5;
 		try {
 			createFichero(n,path);
