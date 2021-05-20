@@ -51,6 +51,11 @@ public class Libreria {
 	public void sortByTituloAsc() {
 		Collections.sort(libreria, Collections.reverseOrder(new CompTituloAsc()));
 	}
+	
+	public void sortByYearTitulo() {
+		Collections.sort(libreria, new CompYearTitulo());
+	}
+	
 	public void removeLibroByISBN(String isbn) {
 		Iterator<Libro> iterator = libreria.iterator();
 		while (iterator.hasNext()) {

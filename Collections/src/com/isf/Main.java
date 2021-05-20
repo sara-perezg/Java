@@ -36,6 +36,9 @@ public class Main {
 		libreria.sortByTituloDesc();
 		libreria.showLibreria();
 		
+		System.out.println("Libreria por año y despues por alfabeticamente descendente");
+		libreria.sortByYearTitulo();
+		libreria.showLibreria();
 		
 		libreria.removeLibroByTitulo("Ruguberta");
 		libreria.showLibreria();
