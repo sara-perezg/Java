@@ -14,20 +14,23 @@ public class Main {
 		personajes.add("personajes1");
 		personajes.add("personajes2");
 		
-		Libro l1 = new Libro("isbn1", "titulo1", 1996,personajes,autores);
+		Libro l1 = new Libro("isbn1", "titulo1", 2000,personajes,autores);
 		
 		libreria.addLibro(l1);
 		
 		libreria.showLibreria();
 		
-		Libro l2 = new Libro("isbn2", "titulo2", 2000,personajes,autores);
+		Libro l2 = new Libro("isbn2", "titulo2", 1669,personajes,autores);
 		libreria.addLibro(l2);
 		libreria.showLibreria();
 	
+		libreria.sortByYearAsc();
+
 		libreria.removeLibroByTitulo("titulo2");
 		libreria.showLibreria();
 		
 		libreria.removeLibroByISBN("isbn1");
 		libreria.showLibreria();
+		
 	}
 }
