@@ -25,7 +25,7 @@ public class Libreria {
 		System.out.println(libreria);
 	}
 	
-	public void removeLibroByISBN(String isbn, LinkedList<Libro> libreria) {
+	public void removeLibroByISBN(String isbn) {
 		Iterator<Libro> iterator = libreria.iterator();
 		while (iterator.hasNext()) {
 			Libro libro = (Libro) iterator.next();
@@ -34,7 +34,7 @@ public class Libreria {
 			}
 		}
 	}
-	public void removeLibroByAuthor(String titulo, LinkedList<Libro> libreria) {
+	public void removeLibroByTitulo(String titulo) {
 		Iterator<Libro> iterator = libreria.iterator();
 		while (iterator.hasNext()) {
 			Libro libro = (Libro) iterator.next();

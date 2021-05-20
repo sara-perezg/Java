@@ -15,8 +15,7 @@ public class Libro {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Libro(String isbn, String titulo, int yearEdicion, LinkedList<String> personajes,
-			LinkedList<String> autores) {
+	public Libro(String isbn, String titulo, int yearEdicion, LinkedList<String> personajes,LinkedList<String> autores) {
 		super();
 		this.isbn = isbn;
 		this.titulo = titulo;
@@ -60,7 +59,7 @@ public class Libro {
 	@Override
 	public String toString() {
 		return "Libro [isbn=" + isbn + ", titulo=" + titulo + ", yearEdicion=" + yearEdicion + ", personajes="
-				+ personajes + ", autores=" + autores + "]";
+				+ personajes + ", autores=" + autores + "]\n";
 	}
 	
 	@Override
