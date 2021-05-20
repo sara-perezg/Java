@@ -1,6 +1,5 @@
 package com.isf;
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Collections;
@@ -40,10 +39,18 @@ public class Libreria {
 	}
 	
 	public void sortByYearAsc() {
-		Collections.sort(libreria);
-		showLibreria();
+		Collections.sort(libreria, new CompYearAsc());
+	}
+	public void sortByYearDesc() {
+		Collections.sort(libreria, Collections.reverseOrder(new CompYearAsc()));
+	}
+	public void sortByTituloDesc() {
+		Collections.sort(libreria, new CompTituloAsc());
 	}
 	
+	public void sortByTituloAsc() {
+		Collections.sort(libreria, Collections.reverseOrder(new CompTituloAsc()));
+	}
 	public void removeLibroByISBN(String isbn) {
 		Iterator<Libro> iterator = libreria.iterator();
 		while (iterator.hasNext()) {

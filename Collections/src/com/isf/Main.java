@@ -14,19 +14,30 @@ public class Main {
 		personajes.add("personajes1");
 		personajes.add("personajes2");
 		
-		Libro l1 = new Libro("isbn1", "titulo1", 2000,personajes,autores);
-		
-		libreria.addLibro(l1);
-		
-		libreria.showLibreria();
-		
-		Libro l2 = new Libro("isbn2", "titulo2", 1669,personajes,autores);
-		libreria.addLibro(l2);
-		libreria.showLibreria();
-	
-		libreria.sortByYearAsc();
+		libreria.addLibro(new Libro("isbn1", "Antonia", 2000,personajes,autores));
+		libreria.addLibro(new Libro("isbn2", "Filomena", 1669,personajes,autores));
+		libreria.addLibro(new Libro("isbn3", "Ruguberta", 1838,personajes,autores));
+		libreria.addLibro(new Libro("isbn4", "Esmenegilda", 1838,personajes,autores));
 
-		libreria.removeLibroByTitulo("titulo2");
+	
+		System.out.println("Libreria ascendente");
+		libreria.sortByYearAsc();
+		libreria.showLibreria();
+
+		System.out.println("Libreria descendente");
+		libreria.sortByYearDesc();
+		libreria.showLibreria();
+		
+		System.out.println("Libreria alfabeticamente ascendente");
+		libreria.sortByTituloAsc();
+		libreria.showLibreria();
+
+		System.out.println("Libreria alfabeticamente descendente");
+		libreria.sortByTituloDesc();
+		libreria.showLibreria();
+		
+		
+		libreria.removeLibroByTitulo("Ruguberta");
 		libreria.showLibreria();
 		
 		libreria.removeLibroByISBN("isbn1");

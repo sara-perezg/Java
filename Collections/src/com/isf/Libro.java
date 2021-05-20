@@ -2,7 +2,7 @@ package com.isf;
 
 import java.util.LinkedList;
 
-public class Libro implements Comparable<Object>{
+public class Libro{
 
 	private String isbn;
 	private String titulo;
@@ -108,18 +108,6 @@ public class Libro implements Comparable<Object>{
 		return true;
 	}
 
-	
-	@Override
-	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		Libro l = (Libro) o;
-		if (this.getYearEdicion() > l.getYearEdicion()) {
-			return 1;
-		}
-		if (this.getYearEdicion() < l.getYearEdicion()) {
-			return -1;
-		}
-		return 0;
-	}
+
 	
 }
