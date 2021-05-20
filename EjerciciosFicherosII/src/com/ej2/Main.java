@@ -11,7 +11,7 @@ public class Main {
 		try {	
 			System.out.println("Nombre: " + f.getName());
 			System.out.println("Path: " + f.getPath());
-			System.out.println("Nombre: " + f.getAbsolutePath());
+			System.out.println("Nombre Absoluto: " + f.getAbsolutePath());
 			if (f.canWrite()) {
 				System.out.println("El archivo se puede escribir");
 			}else {
