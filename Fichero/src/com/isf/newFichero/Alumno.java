@@ -1,14 +1,14 @@
 package com.isf.newFichero;
 
 public class Alumno {
-	String nombreApellidos;
-	String dni;
-	int tel;
-	String asignatura1;
-	double nota1;
-	String asignatura2;
-	double nota2;
-	double promedio = 0.0;
+	public String nombreApellidos;
+	public String dni;
+	public int tel;
+	public String asignatura1;
+	public double nota1;
+	public String asignatura2;
+	public double nota2;
+	public double promedio = 0.0;
 	
 	public Alumno() {
 		super();

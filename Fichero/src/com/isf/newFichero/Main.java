@@ -18,7 +18,7 @@ public class Main {
 			BufferedWriter bw = new BufferedWriter(writer);
 			
 			for (Alumno a : alumnos) {
-				String datos = String.format("%s\n%s\n%d\n%s\n%f\n%s\n%f\n%f\n",
+				String datos = String.format(">%s\n%s\n%d\n%s\n%f\n%s\n%f\n%f\n",
 						a.nombreApellidos, a.dni, a.tel,a.asignatura1,a.nota1,a.asignatura2, a.nota2, a.promedio);
 				System.out.println(datos);
 				bw.write(datos);
