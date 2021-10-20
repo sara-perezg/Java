@@ -7,12 +7,10 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 public class Main {
 
-	@SuppressWarnings("null")
 	public static void main(String[] args) {
 		
 		ArrayList<Alumno> alumnoAL = new ArrayList<Alumno>();
