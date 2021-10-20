@@ -1,5 +1,6 @@
 package com.isf.Ejercicio4;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Alumno {
 	public String nombreApellidos;
@@ -10,14 +11,14 @@ public class Alumno {
 	public String asignatura2;
 	public double nota2;
 	public double promedio = 0.0;
-	public List<List<String>> valoraciones;
+	public ArrayList<List<String>> valoraciones;
 	
 	public Alumno() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public Alumno(String nombreApellidos, String dni, int tel, String asignatura1, double nota1, String asignatura2,
-			double nota2,List<List<String>> valoraciones) {
+			double nota2,ArrayList<List<String>> valoraciones) {
 		super();
 		this.nombreApellidos = nombreApellidos;
 		this.dni = dni;

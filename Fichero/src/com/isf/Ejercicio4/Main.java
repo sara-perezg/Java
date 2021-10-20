@@ -1,19 +1,22 @@
 package com.isf.Ejercicio4;
-import com.isf.newFichero.Alumno;
+
 import java.util.Scanner;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class Main {
 
+	@SuppressWarnings("null")
 	public static void main(String[] args) {
 		
 		ArrayList<Alumno> alumnoAL = new ArrayList<Alumno>();
-		String fileName = "alumnos.txt";
+		String fileName = "alumnosEj4.txt";
 		File file = new File(fileName);
 		Scanner scanner;
 		String dataString = "";
@@ -44,33 +47,37 @@ public class Main {
 				String valoraciones = datosAlumno[8];
 				
 				String[] valoracionesArg = valoraciones.split(valoracionSep);
-				List<List<String>> valoracionesList;
-				
-				for (String valoracion:valoracionesArg) {
-					
+				ArrayList<List<String>> vAL = new ArrayList<List<String>>();
+				for (String vString:valoracionesArg) {
+					String[] vArray= vString.split(":");
+					List<String> vList = Arrays.asList(vArray);
+					vAL.add(vList);
 				}
 				
-				Alumno al = new Alumno(nombre,dni,tel,asig1,nota1,asig2,nota2);
+				Alumno al = new Alumno(nombre,dni,tel,asig1,nota1,asig2,nota2,vAL);
 				alumnoAL.add(al);
 			}
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Error de lectura del archivo "+ fileName);
-		}finally {
-			System.out.println("Archivo leido correctamente");
 		}
 		
 		try {
 			for (Alumno a : alumnoAL) {
 //				quitamos los espacios del nombre de los alumnos
 				String nombre = a.nombreApellidos.replaceAll(" ", "");
-				FileWriter writer = new FileWriter(new File(nombre + ".txt"));
+				FileWriter writer = new FileWriter(new File(nombre + "Ej4.txt"));
 				BufferedWriter bw = new BufferedWriter(writer);
-				String datos = String.format("%s\n%s\n%d\n%s\n%f\n%s\n%f\n%f\n",
+				String datos = String.format("%s\n%s\n%d\n%s\n%f\n%s\n%f\n%f",
 						a.nombreApellidos, a.dni, a.tel,a.asignatura1,a.nota1,a.asignatura2, a.nota2, a.promedio);
 				System.out.println(datos);
 				bw.write(datos);
+				for(int i = 0; i<a.valoraciones.size();i++) {
+					String valoraciones = String.format("%s: %s\n", a.valoraciones.get(i).get(0),a.valoraciones.get(i).get(1));
+					System.out.print(valoraciones);
+					bw.write(valoraciones);
+				}
 				bw.close();
 				writer.close();
 			}

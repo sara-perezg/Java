@@ -1,0 +1,10 @@
+al2 ap2 ap2
+000000B
+600000001
+BBDD
+7,300000
+prog
+6,000000
+6,650000pf1: bien
+pf2: bien
+pf3: bien
