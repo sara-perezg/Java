@@ -1,2 +1,0 @@
-Entero: 11 Real: 22.2
-String: hola

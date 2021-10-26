@@ -1,3 +1,0 @@
-Pepe Garcia Hernandez     DNI:123456789 Nota:5,000000
-Lolo Hernandez Garcia     DNI:234567891 Nota:0,000000
-Manu Lopez Gomez          DNI:345678901 Nota:10,000000
